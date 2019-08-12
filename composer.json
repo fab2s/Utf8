@@ -1,0 +1,43 @@
+{
+    "name" : "fab2s/utf8",
+    "description" : "A purely static UTF8 Helper based on mb_string and ext-intl",
+    "type" : "library",
+    "authors" : [{
+        "name" : "Fabrice de Stefanis"
+    }],
+    "keywords" : [
+        "PHP",
+        "Simple",
+        "Helper",
+        "Utf8",
+        "utf-8",
+        "mb_string",
+        "nfc",
+        "nfd",
+        "normalize",
+        "intl"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+        "php": ">=7.1",
+        "ext-mbstring": "*"
+    },
+    "require-dev": {
+      "phpunit/phpunit": "~7.0|~8.0"
+    },
+    "autoload": {
+        "classmap": [
+          "src"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "fab2s\\Tests\\": "tests/"
+        }
+    },
+    "suggest": {
+        "ext-intl": "To use Utf8 Normalization"
+    }
+}
