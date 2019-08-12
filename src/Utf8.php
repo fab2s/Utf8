@@ -166,20 +166,7 @@ class Utf8
             return mb_ord($chr, static::ENC_UTF8);
         }
 
-        // we do want to use strlen here !
-        switch ($strLen) {
-            case 1:
-                return ord($chr);
-            case 2:
-                return ((ord($chr[0]) & 0x1F) << 6) | (ord($chr[1]) & 0x3F);
-            case 3:
-                return ((ord($chr[0]) & 0x0F) << 12) | ((ord($chr[1]) & 0x3F) << 6) | (ord($chr[2]) & 0x3F);
-            case 4:
-                return ((ord($chr[0]) & 0x07) << 18) | ((ord($chr[1]) & 0x3F) << 12) | ((ord($chr[2]) & 0x3F) << 6) | (ord($chr[3]) & 0x3F);
-            default:
-
-                return false;
-        }
+        return static::ordCompat($chr, $strLen);
     }
 
     /**
@@ -287,6 +274,28 @@ class Utf8
     {
         static::normalizerSupport();
         static::$ordSupport = function_exists('mb_ord');
+    }
+
+    /**
+     * @param string $chr
+     * @param int    $strLen
+     *
+     * @return int|false
+     */
+    protected static function ordCompat(string $chr, int $strLen)
+    {
+        switch ($strLen) {
+            case 1:
+                return ord($chr);
+            case 2:
+                return ((ord($chr[0]) & 0x1F) << 6) | (ord($chr[1]) & 0x3F);
+            case 3:
+                return ((ord($chr[0]) & 0x0F) << 12) | ((ord($chr[1]) & 0x3F) << 6) | (ord($chr[2]) & 0x3F);
+            case 4:
+                return ((ord($chr[0]) & 0x07) << 18) | ((ord($chr[1]) & 0x3F) << 12) | ((ord($chr[2]) & 0x3F) << 6) | (ord($chr[3]) & 0x3F);
+            default:
+                return false;
+        }
     }
 }
 
