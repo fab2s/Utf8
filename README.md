@@ -18,7 +18,7 @@ composer require "fab2s/utf8"
 
 ## Prerequisites
 
-`Utf8` requires [mb_string](https://php.net/mb_string), [ext-intl](https://php.net/intl) is auto detected and used when available for UTF8 Normalization
+`Utf8` requires [mb_string](https://php.net/mb_string), [ext-intl](https://php.net/intl) is auto detected and used when available for UTF-8 Normalization
 
 ## In practice
 
@@ -99,4 +99,4 @@ Contributions are welcome, do not hesitate to open issues and submit pull reques
 
 ## License
 
-Each of `Utf8` components are open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT)
+`Utf8` is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT)
