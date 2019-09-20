@@ -39,5 +39,13 @@
     },
     "suggest": {
         "ext-intl": "To use Utf8 Normalization"
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "rm -f .*.cache"
+        ],
+        "post-install-cmd": [
+            "rm -f .*.cache"
+        ]
     }
 }

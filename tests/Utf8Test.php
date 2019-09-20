@@ -11,17 +11,20 @@ namespace fab2s\Utf8\Tests;
 
 use fab2s\Utf8\Utf8;
 
+/**
+ * Class Utf8Test
+ */
 class Utf8Test extends \PHPUnit\Framework\TestCase
 {
     /**
      * @dataProvider strrposData
      *
-     * @param string      $haystack
-     * @param string      $needle
-     * @param string|null $offset
-     * @param int|false   $expected
+     * @param string    $haystack
+     * @param string    $needle
+     * @param int|null  $offset
+     * @param int|false $expected
      */
-    public function testStrrpos($haystack, $needle, $offset, $expected)
+    public function testStrrpos(string $haystack, string $needle, ?int $offset, $expected)
     {
         $this->assertSame($expected, Utf8::strrpos($haystack, $needle, $offset));
     }
@@ -74,12 +77,12 @@ class Utf8Test extends \PHPUnit\Framework\TestCase
     /**
      * @dataProvider strposData
      *
-     * @param string      $haystack
-     * @param string      $needle
-     * @param string|null $offset
-     * @param int|false   $expected
+     * @param string    $haystack
+     * @param string    $needle
+     * @param int|null  $offset
+     * @param int|false $expected
      */
-    public function testStrpos($haystack, $needle, $offset, $expected)
+    public function testStrpos(string $haystack, string $needle, ?int $offset, $expected)
     {
         $this->assertSame($expected, Utf8::strpos($haystack, $needle, $offset));
     }
@@ -148,7 +151,7 @@ class Utf8Test extends \PHPUnit\Framework\TestCase
      * @param string $string
      * @param string $expected
      */
-    public function testUcfirst($string, $expected)
+    public function testUcfirst(string $string, string $expected)
     {
         $this->assertSame($expected, Utf8::ucfirst($string));
     }
@@ -188,7 +191,7 @@ class Utf8Test extends \PHPUnit\Framework\TestCase
      * @param string $string
      * @param string $expected
      */
-    public function testUcwords($string, $expected)
+    public function testUcwords(string $string, string $expected)
     {
         $this->assertSame($expected, Utf8::ucwords($string));
     }
@@ -226,9 +229,9 @@ class Utf8Test extends \PHPUnit\Framework\TestCase
      * @dataProvider hasUtf8Data
      *
      * @param string $string
-     * @param string $expected
+     * @param bool   $expected
      */
-    public function testHasUtf8($string, $expected)
+    public function testHasUtf8(string $string, bool $expected)
     {
         $this->assertSame($expected, Utf8::hasUtf8($string));
         $this->assertTrue(Utf8::isUtf8($string));
