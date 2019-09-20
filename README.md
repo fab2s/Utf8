@@ -16,6 +16,8 @@ composer require "fab2s/utf8"
 
 `Utf8` is also included in [OpinHelper](https://github.com/fab2s/OpinHelpers) which packages several bellow "Swiss Army Knife" level Helpers covering some of the most annoying aspects of php programing, such as UTF8 string manipulation, high precision Mathematics or properly locking a file
 
+Should you need to work with php bellow 7.1, you can still use [OpinHelper](https://github.com/fab2s/OpinHelpers) `0.x`
+
 ## Prerequisites
 
 `Utf8` requires [mb_string](https://php.net/mb_string), [ext-intl](https://php.net/intl) is auto detected and used when available for UTF-8 Normalization
