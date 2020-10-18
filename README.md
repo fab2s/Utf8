@@ -1,6 +1,6 @@
 # Utf8
 
-[![Build Status](https://travis-ci.org/fab2s/Utf8.svg?branch=master)](https://travis-ci.org/fab2s/Utf8) [![Latest Stable Version](https://poser.pugx.org/fab2s/utf8/v/stable)](https://packagist.org/packages/fab2s/utf8) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/fab2s/Utf8/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/fab2s/Utf8/?branch=master) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) [![License](https://poser.pugx.org/fab2s/utf8/license)](https://packagist.org/packages/fab2s/utf8)
+[![Build Status](https://travis-ci.org/fab2s/Utf8.svg?branch=master)](https://travis-ci.org/fab2s/Utf8) [![Total Downloads](https://poser.pugx.org/fab2s/utf8/downloads)](//packagist.org/packages/fab2s/utf8) [![Monthly Downloads](https://poser.pugx.org/fab2s/utf8/d/monthly)](//packagist.org/packages/fab2s/utf8) [![Latest Stable Version](https://poser.pugx.org/fab2s/utf8/v/stable)](https://packagist.org/packages/fab2s/utf8) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/fab2s/Utf8/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/fab2s/Utf8/?branch=master) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) [![License](https://poser.pugx.org/fab2s/utf8/license)](https://packagist.org/packages/fab2s/utf8)
 
 A purely static UTF-8 Helper based on [mb_string](https://php.net/mb_string) and [ext-intl](https://php.net/intl)
 
@@ -93,7 +93,7 @@ And some simple utility methods:
 
 ## Requirements
 
-`Utf8` is tested against php 7.1, 7.2 and 7.3.
+`Utf8` is tested against php 7.1, 7.2, 7.3 and 7.4
 
 ## Contributing
 
