@@ -93,7 +93,7 @@ And some simple utility methods:
 
 ## Requirements
 
-`Utf8` is tested against php 7.1, 7.2, 7.3 and 7.4
+`Utf8` is tested against php 7.2, 7.3, 7.4 and 8.0
 
 ## Contributing
 
