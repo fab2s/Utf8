@@ -282,7 +282,7 @@ class Utf8
      *
      * @return int|false
      */
-    protected static function ordCompat(string $chr, int $strLen)
+    public static function ordCompat(string $chr, int $strLen)
     {
         switch ($strLen) {
             case 1:

@@ -10,11 +10,12 @@
 namespace fab2s\Utf8\Tests;
 
 use fab2s\Utf8\Utf8;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class Utf8Test
  */
-class Utf8Test extends \PHPUnit\Framework\TestCase
+class Utf8Test extends TestCase
 {
     /**
      * @dataProvider strrposData
@@ -145,6 +146,13 @@ class Utf8Test extends \PHPUnit\Framework\TestCase
         $this->assertSame($expected, Utf8::strtoupper($string));
     }
 
+    public function testStrtolower()
+    {
+        $string     = 'IÑTËRNÂTIÔNÀLIZÆTIØN';
+        $expected   = 'iñtërnâtiônàlizætiøn';
+        $this->assertSame($expected, Utf8::strtolower($string));
+    }
+
     /**
      * @dataProvider ucfirstData
      *
@@ -271,6 +279,23 @@ class Utf8Test extends \PHPUnit\Framework\TestCase
     public function testOrd(string $char, $expected)
     {
         $num = Utf8::ord($char);
+        $this->assertSame($expected, $num);
+
+        if ($expected !== false) {
+            $this->assertSame($char, Utf8::chr($num));
+        }
+    }
+
+    /**
+     * @dataProvider ordData
+     *
+     * @param string    $char
+     * @param int|false $expected
+     */
+    public function testOrdCompat(string $char, $expected)
+    {
+        $strLen = strlen($char);
+        $num    = Utf8::ordCompat($char, $strLen);
         $this->assertSame($expected, $num);
 
         if ($expected !== false) {
