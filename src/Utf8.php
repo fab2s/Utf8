@@ -42,9 +42,9 @@ class Utf8
     /**
      * strrpos
      *
-     * @param string $haystack
-     * @param string $needle
-     * @param int    $offset
+     * @param string   $haystack
+     * @param string   $needle
+     * @param int|null $offset
      *
      * @return int|false
      */
@@ -55,7 +55,7 @@ class Utf8
             return false;
         }
 
-        return mb_strrpos($haystack, $needle, $offset, static::ENC_UTF8);
+        return mb_strrpos($haystack, $needle, (int) $offset, static::ENC_UTF8);
     }
 
     /**
